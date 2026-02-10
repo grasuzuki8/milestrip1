@@ -1,0 +1,331 @@
+/* Estilização Geral */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #003580;
+    background-image: url();
+    background-repeat: repeat; /* Repete a textura */
+    background-color:#f4f7f6;
+; /* Cor de fundo caso a imagem demore a carregar */
+}
+
+
+
+.container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* Grid de Serviços */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Estilo das Caixas de Texto (Cards) */
+.service-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    border-top: 5px solid #003580;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card h3 {
+    color: #003580;
+    margin-top: 0;
+}
+
+.service-card p {
+    line-height: 1.6;
+    color:#003580;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 20px 30px;
+    background-color: #febb02;
+    color: #003580;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+
+
+header {
+   
+    height: 55px;
+    background-color: #0077cc;
+    color: white;
+    padding: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ff9800;
+}
+
+
+
+ button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #0077cc;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #ff9d00;
+}
+
+.banner {
+    background-color: #0077cc;
+    color: white;
+    background-image: url("../img/32975-394513987_small.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.fundo {
+    background-color: rgba(0, 0, 0, 0.212);
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+    font-size: 50px;
+    text-align: center;
+  }
+
+.fundo-logo{
+    flex: 1;
+}
+
+.frase {
+  font: size 24px;
+}
+
+footer {
+    background-color: #0077cc;
+    color: #fff;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.footer-container div {
+    margin-bottom: 15px;
+}
+
+.footer-copy {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.graz {
+    height: auto;
+    width: 100vw;
+    background-repeat: repeat; /* Repete a textura */
+    background-color: #0077cc /* Cor de fundo caso a imagem demore a carregar */
+}
+
+.galeria-cards {
+    display: grid;
+    /* auto-fill garante que eles fiquem alinhados e não estiquem demais */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+.card-3d {
+    width: 100%;
+    height: 400px;
+    perspective: 1000px; /* Profundidade do efeito */
+}
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d;
+}
+
+.card-3d:hover .card-inner {
+    transform: rotateY(180deg);
+}
+.card-front, .card-back {
+    position: absolute; /* Elas precisam estar sobrepostas */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden; /* Esconde o que está atrás */
+    border-radius: 15px;
+    overflow: hidden; /* Garante que nada saia das bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Lado da Frente */
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a foto preencher sem distorcer */
+    display: block;
+}
+
+/* Lado de Trás (Verso) */
+.card-back {
+    background-color: white;
+    color: black;
+    transform: rotateY(180deg); /* Começa virado */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box; /* Garante que o padding não aumente o card */
+    text-align: center;
+}
+
+.card-back h3 {
+    margin-bottom: 10px;
+}
+.containerGra {
+    width: 100vw;
+    height: 50vh;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: url("../img/michelle_pitzel-sunset-8569636_1280.jpg") center/cover no-repeat;
+  color: white;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-box {
+  background: rgba(255, 255, 255, 0.92);
+  padding:  35px 45px;
+  border-radius: 30px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+  max-width: 600px;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+  opacity: 50;
+}
+
+.hero-box.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+   color: #1e90ff;
+  
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+    color: #555;
+
+}
+
+/* SOBRE */
+.sobre {
+  background: #3d9add;
+  padding: 80px 60px;
+}
+
+.sobre h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 60px;
+  color: #07548b;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  position: relative;
+  transition: 0.3s;
+   transform: translateY(30px);
+  transition: all 0.8s ease;
+  opacity: 50;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 20%;
+  width: 6px;
+  height: 60%;
+  background: #0077cc;
+  border-radius: 10px;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.icon {
+  font-size: 28px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.card p {
+  font-size: 15px;
+  line-height: 1.6;
+}
